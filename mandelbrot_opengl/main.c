@@ -17,13 +17,13 @@
 
 GLubyte pixels[SIZE][SIZE][3];
 GLubyte black_rect[SIZE][13][3];
-long double zoom, center_x, center_y;
+double zoom, center_x, center_y;
 char info_string[100];
 int max_iter;
 
-int mandelbrot(long double complex c)
+int mandelbrot(double complex c)
 {
-    long double complex z = 0.0 + 0*I;
+    double complex z = 0.0 + 0*I;
     int i;
     for (i = 0; i != (max_iter-1) && cabsl(z) < 2.0; i++)
     {
@@ -39,10 +39,10 @@ void put_pixel(int x, int y, char r, char g, char b)
     pixels[y][x][2] = b;
 }
 
-void render_mandelbrot(long double ctr_x, long double ctr_y, long double zoom) {
+void render_mandelbrot(double ctr_x, double ctr_y, double zoom) {
     
-    long double dx, dy, off_x, off_y;
-    long double complex c;
+    double dx, dy, off_x, off_y;
+    double complex c;
     int x, y, i;
     off_x = -2.0*zoom+ctr_x;
     off_y = -2.0*zoom+ctr_y;
@@ -93,7 +93,7 @@ void display()
 
     // draw text
     glRasterPos2i(2, 2);
-    sprintf(info_string, "ZOOM:%lldX  X:%.10Lf  Y:%.10Lf  MAX_ITER:%d", (long long)(1.0/zoom), center_x, center_y, max_iter);
+    sprintf(info_string, "ZOOM:%lldX  X:%.10f  Y:%.10f  MAX_ITER:%d", (long long)(1.0/zoom), center_x, center_y, max_iter);
     int i;
     for (i = 0; info_string[i] != '\0'; i++)
     {

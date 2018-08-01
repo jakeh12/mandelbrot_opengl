@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		67D8C60C21100C9A0092A206 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 67D8C60B21100C9A0092A206 /* main.c */; };
+		67D8C61421100D270092A206 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D8C61321100D270092A206 /* GLUT.framework */; };
+		67D8C61621100D2E0092A206 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D8C61521100D2E0092A206 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		67D8C60821100C9A0092A206 /* mandelbrot_opengl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mandelbrot_opengl; sourceTree = BUILT_PRODUCTS_DIR; };
 		67D8C60B21100C9A0092A206 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		67D8C61321100D270092A206 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		67D8C61521100D2E0092A206 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D8C61621100D2E0092A206 /* OpenGL.framework in Frameworks */,
+				67D8C61421100D270092A206 /* GLUT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +49,7 @@
 			children = (
 				67D8C60A21100C9A0092A206 /* mandelbrot_opengl */,
 				67D8C60921100C9A0092A206 /* Products */,
+				67D8C61221100D270092A206 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +67,15 @@
 				67D8C60B21100C9A0092A206 /* main.c */,
 			);
 			path = mandelbrot_opengl;
+			sourceTree = "<group>";
+		};
+		67D8C61221100D270092A206 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67D8C61521100D2E0092A206 /* OpenGL.framework */,
+				67D8C61321100D270092A206 /* GLUT.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +254,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -246,6 +263,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
